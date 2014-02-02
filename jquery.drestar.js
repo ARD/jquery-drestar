@@ -44,7 +44,7 @@
                 $('li.'+elemid+'-drestar-'+i).removeClass('active');
                 
             });
-            
+             
             ul.mouseout(function(){
                 lastStar = parseInt($('#'+elemid+'-input-drestar-value').val());
                 for(i=1; i <= lastStar; i++)
