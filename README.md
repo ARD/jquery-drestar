@@ -41,6 +41,7 @@ rating.php
 echo $_POST['star-input-drestar-value'];
 ?>
 ```
+DEMO: http://andrerainaud.com.br/projetos/jquery-drestar/demo.html
 
 Multiple rating with 6 stars
 ```html
@@ -82,3 +83,4 @@ rating2.php
 echo 'Rating 1: ',$_POST['star1-input-drestar-value'],'<br />','Rating 2: ',$_POST['star2-input-drestar-value'],'<br />','Rating 3: ',$_POST['star3-input-drestar-value'];
 ?>
 ```
+DEMO: http://andrerainaud.com.br/projetos/jquery-drestar/demo2.html
