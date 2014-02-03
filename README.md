@@ -56,7 +56,7 @@ ul.star{
 ul.star li { list-style:none;display:inline-block; width:27px; height:25px; background:url(http://andrerainaud.com.br/projetos/jquery-drestar/star.png) no-repeat 0 0; cursor:pointer; }
 ul.star li:hover, li.active { background-position:0 -25px !important; }
 </style>
-<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.drestar.js"></script>
 <script>
 $( document ).ready(function() {
