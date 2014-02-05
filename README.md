@@ -84,3 +84,15 @@ echo 'Rating 1: ',$_POST['star1-input-drestar-value'],'<br />','Rating 2: ',$_PO
 ?>
 ```
 DEMO: http://andrerainaud.com.br/projetos/jquery-drestar/demo2.html
+
+Get value of selected rate
+```javascript
+$( document ).ready(function() {
+    $('.star').drestar({
+        'total':6,
+        'onClick': function(s){
+    	    alert('Rate:'+s);
+        }
+    });
+});
+```
