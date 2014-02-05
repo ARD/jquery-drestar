@@ -7,7 +7,8 @@
 (function($){
     $.fn.drestar = function(settings){
         var config = {
-            'total': 5
+            'total': 5,
+            onClick: null
         },
         ul         = null,
         elemid     = null,
@@ -29,6 +30,9 @@
                 elemid = $(this).parent().attr('id');
                 star = parseInt($(this).attr('data-star'));
                 $('#'+elemid+'-input-drestar-value').val(star);
+                
+                if(config.onClick) config.onClick(star);
+                
             });
             
             
