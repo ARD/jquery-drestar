@@ -16,7 +16,7 @@ ul#star{
 	padding:0;
 }
 ul#star li { list-style:none;display:inline-block; width:27px; height:25px; background:url(http://andrerainaud.com.br/projetos/jquery-drestar/star.png) no-repeat 0 0; cursor:pointer; }
-ul#star li:hover, li.active { background-position:0 -25px !important; }
+ul#star li.active { background-position:0 -25px !important; }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.drestar.js"></script>
@@ -55,7 +55,7 @@ ul.star{
 	padding:0;
 }
 ul.star li { list-style:none;display:inline-block; width:27px; height:25px; background:url(http://andrerainaud.com.br/projetos/jquery-drestar/star.png) no-repeat 0 0; cursor:pointer; }
-ul.star li:hover, li.active { background-position:0 -25px !important; }
+ul.star li.active { background-position:0 -25px !important; }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.drestar.js"></script>
@@ -93,6 +93,17 @@ $( document ).ready(function() {
         'onClick': function(s){
     	    alert('Rate:'+s);
         }
+    });
+});
+```
+
+5 stars, 3 stars selected and disabled
+```javascript
+$( document ).ready(function() {
+    $('.star').drestar({
+        'total':5,
+        'startRate':3,
+        'isDisabled':true
     });
 });
 ```
