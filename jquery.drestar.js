@@ -8,7 +8,9 @@
     $.fn.drestar = function(settings){
         var config = {
             'total': 5,
-            onClick: null
+            onClick: null,
+            startRate: 0,
+            isDisabled: false
         },
         ul         = null,
         elemid     = null,
@@ -22,10 +24,11 @@
             elemid = ul.attr('id')
             
             for(i = 1; i <= config.total; i++)
-            $(this).append('<li class="'+elemid+'-drestar-'+i+'" data-star="'+i+'"></li>');
+            $(this).append('<li class="'+elemid+'-drestar-'+i+(i <= config.startRate ? ' active' : '')+'" data-star="'+i+'"></li>');
             
-            ul.append('<input type="hidden" value="0" id="'+elemid+'-input-drestar-value" name="'+elemid+'-input-drestar-value" />');
+            ul.append('<input type="hidden" value="'+config.startRate+'" id="'+elemid+'-input-drestar-value" name="'+elemid+'-input-drestar-value" />');
             
+            if(!config.isDisabled)
             $('> li',ul).click(function(){
                 elemid = $(this).parent().attr('id');
                 star = parseInt($(this).attr('data-star'));
@@ -35,7 +38,7 @@
                 
             });
             
-            
+            if(!config.isDisabled)
             $('> li',ul).hover(function(){
                 elemid = $(this).parent().attr('id');
                 lastStar = parseInt($('#'+elemid+'-input-drestar-value').val());
@@ -48,7 +51,8 @@
                 $('li.'+elemid+'-drestar-'+i).removeClass('active');
                 
             });
-             
+            
+            if(!config.isDisabled)
             ul.mouseout(function(){
                 lastStar = parseInt($('#'+elemid+'-input-drestar-value').val());
                 for(i=1; i <= lastStar; i++)
