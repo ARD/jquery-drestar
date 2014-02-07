@@ -1,7 +1,7 @@
 jquery-drestar
 ==============
 
-An simple jquery plugin for create star rating control 
+A simple jquery plugin for create star rating control 
 
 
 Basic use. Simple rating.
@@ -97,7 +97,7 @@ $( document ).ready(function() {
 });
 ```
 
-5 stars, 3 stars selected and disabled
+5 stars, 3 selected and disabled
 ```javascript
 $( document ).ready(function() {
     $('.star').drestar({
