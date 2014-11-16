@@ -1,0 +1,4 @@
+ul.drestar {margin:0;padding:0;}
+ul.drestar li {list-style:none;display:inline-block; width:27px; height:25px; background:url(star.png) no-repeat 0 0; cursor:pointer; }
+ul.drestar li.active {background-position:0 -25px !important; }
+ul.drestar-off li { cursor: default; }

@@ -21,7 +21,12 @@
 
         return this.each(function(){
             ul = $(this);
-            elemid = ul.attr('id')
+            elemid = ul.attr('id');
+            
+            ul.addClass('drestar');
+            
+            if(config.isDisabled)
+                ul.addClass('drestar-off');
             
             for(i = 1; i <= config.total; i++)
             $(this).append('<li class="'+elemid+'-drestar-'+i+(i <= config.startRate ? ' active' : '')+'" data-star="'+i+'"></li>');
